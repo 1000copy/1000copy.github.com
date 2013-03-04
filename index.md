@@ -3,7 +3,7 @@ layout: page
 ---
 {% include JB/setup %}
 
-是的，你没有看错，[管家婆](www.grasp.com.cn) 也有实验室。
+是的，你没有看错，[管家婆](http://www.grasp.com.cn) 也有实验室。
 
 ## 3平台
 
