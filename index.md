@@ -1,25 +1,23 @@
 ---
 layout: page
-title: Hello World!
+title: 管家婆的技术实验室
 tagline: Supporting tagline
 ---
 {% include JB/setup %}
 
-一个超链接 [新浪微博](http:/t.cn)
+是的，你没有看错，[管家婆](www.grasp.com.cn) 也有实验室。
 
-## 标题
+## 3平台
 
-代码 :
-    
-    title : My Blog =)
-    
-    author :
-      name : Name Lastname
-      email : blah@email.test
-      github : username
-      twitter : username
+carpa,xiwa,carpaxiwa
 
-最新博客:
+## 组件
+
+打印 设备
+
+## 孵化
+
+sql-maker
 
 <ul class="posts">
   {% for post in site.posts %}
@@ -27,7 +25,9 @@ tagline: Supporting tagline
   {% endfor %}
 </ul>
 
- [powered by jekyll-bootstrap](http://github.com/plusjade/jekyll-bootstrap)!
+ [新浪微博](http:/t.cn) 
+ 内网[trdwiki](http://trdwebserver:8082/trdwiki)
+ 内网[q2a](http://192.168.12.247/q2a)
 
 
 
