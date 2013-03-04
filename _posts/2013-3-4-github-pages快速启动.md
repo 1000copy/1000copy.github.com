@@ -12,8 +12,8 @@ tags : [jekyll github]
 
 都是Blog发布的货。但是和wordpress这样的Blog Engine相比，Pages的好处还是有的：
 
-1. 内文本，外格式
-2. 自带版本管理
+	* 内文本，外格式
+	* 自带版本管理
 
 #### 快速起步只要三分钟
 
