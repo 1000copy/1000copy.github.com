@@ -1,7 +1,5 @@
 ---
 layout: page
-title: 管家婆的技术实验室
-tagline: Supporting tagline
 ---
 {% include JB/setup %}
 
