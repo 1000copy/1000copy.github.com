@@ -1,3 +1,10 @@
+---
+layout: post
+category : 工具
+tags : [git github quickstart]
+---
+{% include JB/setup %}
+
 GitHub那么流行，不去玩玩，还是技术人员吗？
 我们这次玩完后，你可以
 
