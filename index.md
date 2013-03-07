@@ -12,6 +12,7 @@ layout: page
  [新浪微博](http:/t.cn) 
  内网[trdwiki](http://trdwebserver:8082/trdwiki)
  [q2a](http://192.168.12.247/q2a)
+ <img src="http://www.gravatar.com/avatar/88caadc211781b5ba82d07e435443213">
 
 
 
