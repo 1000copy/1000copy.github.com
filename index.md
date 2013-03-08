@@ -13,6 +13,6 @@ layout: page
  内网[trdwiki](http://trdwebserver:8082/trdwiki)
  [q2a](http://192.168.12.247/q2a)
  <img src="http://www.gravatar.com/avatar/88caadc211781b5ba82d07e435443213">
-
+<script src="http://s85.cnzz.com/stat.php?id=5081690&web_id=5081690" language="JavaScript"></script>
 
 
