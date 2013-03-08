@@ -14,5 +14,5 @@ layout: page
  [q2a](http://192.168.12.247/q2a)
  <img src="http://www.gravatar.com/avatar/88caadc211781b5ba82d07e435443213" height="20" width="20">
 <script src="http://s85.cnzz.com/stat.php?id=5081690&web_id=5081690" language="JavaScript"></script>
-
+<a href="http://rizhibao.com" name="rizhi5cd393699b5748eefa4361bde95f8827bao" >日志宝</a>
 
