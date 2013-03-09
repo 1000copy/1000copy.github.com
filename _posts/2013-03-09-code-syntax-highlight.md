@@ -24,3 +24,12 @@ public class HelloWorld {
 
 }
 {% endhighlight %}
+
+or by highlighter.js  http://stackoverflow.com/questions/8648390/syntax-highlighting-markdown-code-blocks-in-jekyll-without-using-liquid-tags
+Here is some Ruby code.
+
+<pre>
+  <code class="ruby">
+    puts "hello"
+  </code>
+</pre>
