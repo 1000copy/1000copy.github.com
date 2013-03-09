@@ -1,7 +1,7 @@
 ---
 layout: post
-category : 博客
-tags : [新闻, 平台, 组件, 技术]
+category : markdown
+tags : [markdown]
 ---
 {% include JB/setup %}
 
