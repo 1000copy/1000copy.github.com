@@ -14,7 +14,8 @@ markdown = Redcarpet.new("Hello World!")
 puts markdown.to_html
 ```
 
-```java
+
+{% highlight java %}
 public class HelloWorld {
 
     public static void main(String[] args) {
@@ -22,4 +23,4 @@ public class HelloWorld {
     }
 
 }
-```
+{% endhighlight %}
