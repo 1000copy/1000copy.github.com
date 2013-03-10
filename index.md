@@ -10,8 +10,21 @@ layout: page
 </ul>
 
  [新浪微博](http://t.cn/1000copy) 
- 内网[trdwiki](http://trdwebserver:8082/trdwiki)
- [q2a](http://192.168.12.247/q2a)
- <img src="http://www.gravatar.com/avatar/88caadc211781b5ba82d07e435443213" height="20" width="20">
+</script>
+ <!-- 在需要的地方加入按钮 —->
+<div class="anypay-button"></div>
+
+<!-- 在合适的地方链入AnyPay脚本 -->
+<script type="text/javascript" src="http://guoyu-app.b0.upaiyun.com/pay.js"></script>
+<!-- 配置按钮参数 -->
+<script type="text/javascript">
+	var payInfo = {
+		// 需要开通收款主页
+		baseUrl: 'https://me.alipay.com/guoyu', 
+		payAmount: 10,
+		payReason: '捐赠anyPay插件，为了更好的社区支付'
+	}
+	anyPay.init(payInfo);
+</script>
 <script src="http://s85.cnzz.com/stat.php?id=5081690&web_id=5081690" language="JavaScript"></script>
 <a href="http://rizhibao.com" name="rizhi5cd393699b5748eefa4361bde95f8827bao" >日志宝</a>
