@@ -10,8 +10,7 @@ layout: page
 </ul>
 
  [新浪微博](http://t.cn/1000copy) 
-</script>
- <!-- 在需要的地方加入按钮 —->
+
 <div class="anypay-button"></div>
 
 <!-- 在合适的地方链入AnyPay脚本 -->
