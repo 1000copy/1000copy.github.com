@@ -6,11 +6,11 @@ tags : [鸡血]
 
 做程序员，用的工具当然要正经点。起码得是编译型的。有强大的IDE和语法。 javascript ？可真是看不上。也就是做些客户端检查，错了就用alert嚎叫下。连OO都不支持,设计的也搓。去。
 
-几年后，google 把ajax红起来，然后发生了很多不可思议的事情。
+我这样想后几年，google 把ajax红起来，然后发生了很多不可思议的事情。
 
 1. 框架雨后春笋，热闹非凡。就像当年的java,yesterday once more 
 2. 在github上看到js的项目已经占到了70% 
-3. TW的技术雷达，提出了 javascript as platform 这样的buzz word 
+3. [TW的技术雷达](http://thoughtworks.fileburst.com/assets/technology-radar-october-2012.pdf)，提出了 javascript as platform 这样的buzz word 
 4. MS 的windows8 ，以javascript作为first class lang
 5. 别忘了，还有HTML5
 
