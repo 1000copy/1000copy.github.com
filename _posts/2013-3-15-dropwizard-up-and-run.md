@@ -1,7 +1,7 @@
 ---
 layout: post
-category : 框架
-tags : [鸡血]
+category : java
+tags : [dropwizard java]
 ---
 
 关于 Dropwizard 的第一句话，就把老子震动了。Dropwizard straddles the line between being a library and a framework。凭着这一点，我想要继续看下去。先把它up and run 起来。
