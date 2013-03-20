@@ -11,17 +11,22 @@ tags : [dropwizard java]
 没有耐性的，看看步骤
 
 1. 设置run conf 的主类为　com.example.helloworld.HelloWorldService
+
 2. 装入数据
     java -jar target/dropwizard-example-0.3.0-SNAPSHOT.jar db migrate example.yml
+
 3. 执行服务
     java -jar target/dropwizard-example-0.3.0-SNAPSHOT.jar server example.yml
+
 4. 浏览器测试 
     输入 http://localhost:8080/hello-world
     看到 {"id":1,"content":"Hello, Stranger!"}
     就说明，它工作了
+
 5. 不仅仅是URL映射，dropwizard还提供了管理接口
     http://localhost:8081/
 
+___________________________________________________
 觉得还不过瘾？continue .
 
 难道说，一个example，而且还是现成代码的project ，也需要教程吗？
