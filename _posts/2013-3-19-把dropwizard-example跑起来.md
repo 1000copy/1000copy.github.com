@@ -10,6 +10,7 @@ tags : [dropwizard java]
 
 没有耐性的，看看步骤
 
+<pre>
 1. 设置run conf 的主类为　com.example.helloworld.HelloWorldService
 
 2. 装入数据
@@ -25,7 +26,7 @@ tags : [dropwizard java]
 
 5. 不仅仅是URL映射，dropwizard还提供了管理接口
     http://localhost:8081/
-
+</pre>
 ___________________________________________________
 觉得还不过瘾？continue .
 
