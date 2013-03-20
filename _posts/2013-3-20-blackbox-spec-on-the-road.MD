@@ -43,9 +43,6 @@ sql难以剖析，难以扩展,这也给解决以上问题带来复杂度。我�
 squeryl 有点味道。
 
 
-2. RIA 需要的数据应该是json打包的
-3. 打包了Http server ,Log analyser
-
 下面的代码，感觉起来是不是超现代呢？
 
 <pre>
