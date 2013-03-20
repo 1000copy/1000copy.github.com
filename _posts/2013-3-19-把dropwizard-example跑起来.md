@@ -8,6 +8,22 @@ tags : [dropwizard java]
 
 #### 把 dropwizard-example 跑起来
 
+没有耐性的，看看步骤
+
+1. 设置run conf 的主类为　com.example.helloworld.HelloWorldService
+2. 装入数据
+    java -jar target/dropwizard-example-0.3.0-SNAPSHOT.jar db migrate example.yml
+3. 执行服务
+    java -jar target/dropwizard-example-0.3.0-SNAPSHOT.jar server example.yml
+4. 浏览器测试 
+    输入 http://localhost:8080/hello-world
+    看到 {"id":1,"content":"Hello, Stranger!"}
+    就说明，它工作了
+5. 不仅仅是URL映射，dropwizard还提供了管理接口
+    http://localhost:8081/
+
+觉得还不过瘾？continue .
+
 难道说，一个example，而且还是现成代码的project ，也需要教程吗？
 官方的 getting started 从头到尾的讲解这个案例，并且不是基于eclipse来讲的。而我的这个教程，针对的是eclipse+现成的源代码来的。有点不同。就是说，我的才是真的getting started —— 不需要你一行行的敲入代码（或者拷贝粘贴），拿到案例，更快开始。
 
