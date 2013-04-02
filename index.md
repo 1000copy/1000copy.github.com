@@ -3,25 +3,18 @@ layout: page
 ---
 {% include JB/setup %}
 
-	     2
-brucebot   350 天前
-分页的使用如下:
-_config.xml里面加上 paginate: 5 //每一页显示的文章数
-
-index.html里面加上:
-
 <div id="pagination">
 <div class="pagenavi">
 <span class="page_number">第{{paginator.page}}页/共{{paginator.total_pages}}页</span>
 <a href="/">第一页</a>
 {% if paginator.previous_page %}
 {% if paginator.previous_page == 1 %}
-<a href="/" class="current"><<前一页</a>
+<a href="/" class="current">前一页</a>
 {% else %}
-<a href="/page{{paginator.previous_page}}"><<前一页</a>
+<a href="/page{{paginator.previous_page}}">前一页</a>
 {% endif %}
 {% else %}
-<span><<前一页</span>
+<span>前一页</span>
 {% endif %}
 {% for count in (2..paginator.total_pages) limit:8 %}
 {% if count == paginator.page %}
