@@ -1,3 +1,28 @@
+##如何安静卸载软件
+
+想我这样的常常玩软件的人，当厌倦了一个软件要卸载，反反复复的看到 “你要不要卸载”，以及跟着引导界面走，一次又一次，真的很蛋疼。
+
+是否可以安静点？喊你走，你就走？
+
+关键看软件是否支持安静卸载。而这和制作软件安装包的工具也有关系。
+
+比如 Nullsoft Install System，虽然没有help选项，但是，可以用/S 选项做静默卸载。比如foxmail就是用的 Nullsoft Install System，虽然并不提示可以安静卸载，但是假如/S就可以。只是，必须是大写S！
+
+It is documented to work for the uninstaller also but it has to be uppercase (/S) and if you are calling the uninstaller from your installer to uninstall a older version you should also provide the special _?= uninstaller parameter. How silent it is depends on your code; a MessageBox without /SD will not be silent etc.
+
+wmic 也可以静默卸载，只是，太慢了。伤心。
+
+如果是innosetup : 选项为 /verysilent 
+比如：安静卸载rubyinstall ， "C:\rb\unins000.exe" /verysilent 
+help ref：http://www.jrsoftware.org/ishelp/index.php?topic=setupcmdline
+
+对于visual studio 这样的大型工具，静默卸载更有价值，
+
+"c:\Program Files (x86)\Microsoft Visual Studio 10.0\Microsoft Visual Studio 2010 Ultimate - CHS\setup.exe" /q
+msiexec.exe /x {85795C09-D6A4-3206-AF23-0311AF630C64} /q
+
+
+如果是
 ## 技术管理五讲
 
 定规矩
