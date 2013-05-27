@@ -54,6 +54,11 @@ $ruby ./dk.rb install
 [INFO] Updating convenience notice gem override for 'C:/Ruby193'
 [INFO] Installing 'C:/Ruby193/lib/ruby/site_ruby/devkit.rb'
 
+8. git clone https://github.com/plusjade/jekyll-bootstrap.git
+9. Run
+cd jekyll-bootstrap
+jekyll serve
+start http://localhost:4000
 
 trouble shooting :
 
@@ -71,3 +76,5 @@ ERROR:  Error installing jekyll:
 	invalid gem format for C:/Ruby193/lib/ruby/gems/1.9.1/cache/yajl-ruby-1.1.0-x86-mingw32.gem
 
 单独执行 gem install yajl-ruby 
+
+
