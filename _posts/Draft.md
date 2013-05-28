@@ -1,28 +1,98 @@
+## 如何使用wget 做form post？
+
+我以前拿wget就是下载，尽管用什么都可以下载，但是看着wget黑乎乎的屏显，就是洋溢着快乐。
+
+其实wget也可以做form提交，比如登录某个网站后下载东西。还可以记录cookie，然后再次提交。
+
+1. 如果一个Login是这样的
+
+<HTML>
+<HEAD>
+<TITLE></TITLE>
+<META http-equiv=Content-Type content="text/html; charset=UTF-8">
+</HEAD>
+
+
+<form method="post" action="http://m.hifiwiki.net/user/login/2">
+    <input name="usrname" type="text" size="24" maxlength="60" value="1000copy"/>
+    <input name="psw" type="password" size="10" maxlength="20" value="1"/>    
+    <input name="user_login" class="butt" type="submit" value="进入"/>
+</form>
+
+2. 那么 对于的wget提交就是
+
+   wget --post-data="usrname=1000copy&psw=1&user_login=进入" localhost
+
+3. 可以在php 一侧验证这个提交是否有效  
+  
+编辑  index.php
+  
+  <?
+	 echo "d:";
+	 echo $_GET["usrname"];
+	 echo $_POST["usrname"];
+	 echo $_SERVER['HTTP_USER_AGENT'] ;
+  ?>
+启动php服务器
+	\php\php -S  localhost:80
+
+4. curl 应该也有效，只是我的curl好像不支持localhost 
+
+  curl --form "usrname=1000copy&psw=1&user_login=进入" localhost/test.php 
+
+
 ##如何安静卸载软件
 
 想我这样的常常玩软件的人，当厌倦了一个软件要卸载，反反复复的看到 “你要不要卸载”，以及跟着引导界面走，一次又一次，真的很蛋疼。
 
-是否可以安静点？喊你走，你就走？
+是否可以安静点？喊你走，你就走！
 
 关键看软件是否支持安静卸载。而这和制作软件安装包的工具也有关系。
 
-比如 Nullsoft Install System，虽然没有help选项，但是，可以用/S 选项做静默卸载。比如foxmail就是用的 Nullsoft Install System，虽然并不提示可以安静卸载，但是假如/S就可以。只是，必须是大写S！
+1.  Nullsoft Install System，虽然没有help选项，但是，可以用/S 选项做静默卸载。
 
+比如foxmail就是用的 Nullsoft Install System，虽然并不提示可以安静卸载，但是假如/S就可以。只是，必须是大写S！
 It is documented to work for the uninstaller also but it has to be uppercase (/S) and if you are calling the uninstaller from your installer to uninstall a older version you should also provide the special _?= uninstaller parameter. How silent it is depends on your code; a MessageBox without /SD will not be silent etc.
 
-wmic 也可以静默卸载，只是，太慢了。伤心。
-
-如果是innosetup : 选项为 /verysilent 
+2. 如果是innosetup : 选项为 /verysilent 
 比如：安静卸载rubyinstall ， "C:\rb\unins000.exe" /verysilent 
 help ref：http://www.jrsoftware.org/ishelp/index.php?topic=setupcmdline
 
-对于visual studio 这样的大型工具，静默卸载更有价值，
+3. MSI的安装包，加入/qn就可以。那是相当的安静。举例子：
 
-"c:\Program Files (x86)\Microsoft Visual Studio 10.0\Microsoft Visual Studio 2010 Ultimate - CHS\setup.exe" /q
-msiexec.exe /x {85795C09-D6A4-3206-AF23-0311AF630C64} /q
+silverlight : MsiExec.exe /X{89F4137D-6C26-4A84-BDB8-2E5A4BB71E00} /qn
+silverlight SDK 4:MsiExec.exe /X{2927F380-C7B2-415F-9057-E100532117AF} /qn
+silverlight SDK 3:MsiExec.exe /X{18F8306B-E31B-4E52-8BD0-17A82EC0AFC4} /qn
+4. ClickOnce Dotnet的发布制作工具的卸载
+
+看到uninstall string 的字样为 rundll32.exe dfshim.dll，就可以知道这是clickonce 的安装程序。
+比如： github就是采用ClickOnce打包的。Uninstall string 是这样的；
+
+rundll32.exe dfshim.dll,ShArpMaintain GitHub.application, Culture=neutral, PublicKeyToken=317444273a93ac29, processorArchitecture=x86
+
+对于这个类型的软件，是否可以Slient ？答案是NO。
+
+You can not suppress the uninstall dialog for a ClickOnce application. You can write a small .net app to uninstall the ClickOnce application and programmatically hit the button on the dialog so not action is required by the user. That's about the best you can do.
+
+或者借助另一个工具： https://github.com/6wunderkinder/Wunder.ClickOnceUninstaller
 
 
-如果是
+5. 未知制作工具
+
+也可以试试/q 。比如 visual studio 这样的大型工具，静默卸载更有价值	
+
+	"c:\Program Files (x86)\Microsoft Visual Studio 10.0\Microsoft Visual Studio 2010 Ultimate - CHS\setup.exe" /q
+
+wmic 也可以静默卸载，只是，太慢了。伤心。
+
+Don't over complicate it & keep it simple - this works on both Windows XP & 7:
+
+Go to Add/Remove Programs and make note of the exact name of the program. Open Notepad and paste the text below:
+
+wmic product where name="PROGRAM NAME" uninstall
+
+but make sure to type the exact name of the program in between the quotation marks and chose Save As /All Files and name the file Uninstall.bat and then test it out to make sure it works.
+
 ## 技术管理五讲
 
 定规矩
